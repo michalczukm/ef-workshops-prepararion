@@ -1,7 +1,16 @@
 param(
-    [string]$bak,
+    [string] $bak,
     [string] $project
 )
+
+if ($bak -eq "") {
+    $here = (resolve-path . ).Path;
+    $bak = "${here}\NORTHWND-20180519-1.bak";
+}
+
+if ($project -eq "") {
+    $project = (resolve-path .. ).Path;
+}
 
 $host.ui.RawUI.WindowTitle = "infoShare Academy Workshops - restore db"
 
