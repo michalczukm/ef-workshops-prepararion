@@ -5,7 +5,7 @@ param(
 
 if ($bak -eq "") {
     $here = (resolve-path . ).Path;
-    $bak = "${here}\NORTHWND-20180519-1.bak";
+    $bak = "${here}\NORTHWND-20180518-1.bak";
 }
 
 if ($project -eq "") {
